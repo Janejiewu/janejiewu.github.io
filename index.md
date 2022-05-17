@@ -5,6 +5,7 @@
       <p><b>undergraduate</b></p>
       <p><b>Tianjin University</b></p>
       <p><b>mail:jixinzhao0101@gmail.com</b></p>
+    </td>
   </tr>
 </table>
 
