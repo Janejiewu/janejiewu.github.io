@@ -1,16 +1,280 @@
-<table border="0">
-  <tr>
-    <td width="75%">
-      <h1>Zhao Jixin</h1>
-      <p><b>undergraduate</b></p>
-      <p><b>Tianjin University</b></p>
-      <p><b>mail:jixinzhao0101@gmail.com</b></p>
-    </td>
-  </tr>
-</table>
+<!DOCTYPE html>
+<html>
 
-### Research Interests:
-- Computer Vision
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yuekun Dai</title>
+  <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+  <link rel="shortcut icon" type="image/x-icon" href="images/misc/profile.jpg">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <!-- Bulma Version 0.7.5-->
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.7.5/css/bulma.min.css" />
+  <link href='css/style.css?_t=20200916' rel='stylesheet' type='text/css'>
+  <script defer src="font-awesome/js/brands.min.js"></script>
+  <script defer src="font-awesome/js/regular.min.js"></script>
+  <script defer src="font-awesome/js/fontawesome.min.js"></script>
+    <style>
+      .red {
+        color: rgb(238, 76, 44);
+        font-style: normal;
+      }
+      .blue {
+        color: rgb(238, 76, 44);
+        font-style: normal;
+      }
+       
+      #intro {
+       margin-top: 0em !important;
+      }
+      
+      .content h3 {
+       margin-bottom: 1em!important;
+       margin-top: 2em!important;
+      }
 
-### Recent News:
-- 2022/05
+      .content figure {
+       width: 90%;
+       display: flex;
+       align-items: center;
+       overflow: hidden;
+       margin-left: auto!important;
+       margin-right: auto!important;
+      }
+      
+      .columns:not(:last-child) {
+       margin-bottom: 1.75rem!important;
+      }
+
+      #sidebar {
+        width: 75%;
+      }
+
+      @media screen and (min-width: 769px), print {
+        .column.is-2_5, .column.is-2-tablet {
+          flex: none;
+          width: 20%;
+        }
+      }
+</style>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-2_5">
+          <div class="sticky">
+            <figure class="image" style="width: 11.6rem; margin-top: 6px;">
+              <img src="images/misc/profile_img.jpg">
+            </figure>
+            <div class="content">
+              <h2 style="margin-top: 1em">Yuekun Dai</h2>
+              <p>
+                <b>MMLab@NTU</b><br/> 
+                Singapore<br/> 
+              </p>
+            </div>
+            <!-- social network icons -->
+            <div class="social">
+              <a href="https://github.com/ykdai" target="_blank">
+                <span class="fab fa-github fa-2x" style="display:inline; text-decoration: none; color: #4a4a4a;"></span>
+              </a>
+              <a href="https://scholar.google.com/citations?user=UyKX7ZsAAAAJ" target="_blank">
+                <span class="fab fa-google fa-2x" style="display:inline; text-decoration: none; color: #4a4a4a; margin-left: 15px"></span>
+              </a>
+              <a href="https://www.linkedin.com/in/%E6%9C%88%E5%9D%A4-%E6%88%B4-19b33421a/" target="_blank">
+                <span class="fab fa-linkedin fa-2x" style="display:inline; text-decoration: none; color: #4a4a4a; margin-left: 15px"></span>
+              </a>
+              <a href="mailto:ydai005@e.ntu.edu.sg" target="_blank">
+                <span class="fa-regular fa-envelope fa-2x" style="display:inline; text-decoration: none; color: #4a4a4a; margin-left: 15px"></span>
+              </a>
+            </div>
+            <!-- slogon -->
+          
+            <div id="sidebar" class="menu sticky is-hidden-mobile">
+              <p class="menu-label"><b>Quick Links</b></p>
+              <ul class="menu-list">
+                <li><a href="#intro">About Me</a></li>
+                <li><a href="#experiences">Experiences</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#awards">Awards</a></li>
+                <li><a href="#services">Services</a></li>
+              </ul>
+            </div>
+
+            <div class="slogon">
+              <p>Welcome to my homepage!</p> 
+            </div>
+            <div>
+              <a href="https://clustrmaps.com/site/1btxt" title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?cl=0e1633&w=215&t=n&d=n74bl4ZAst384EnLUu0gpdoA6A_gY_udu62VgWFA7js&co=ffffff&ct=8b8787"></a>
+            </div>
+          </div>
+
+          
+
+        </div>
+        <div class="column right-panel">
+          <div class="content">
+
+
+            <!--About Me-->
+            <h2 id="intro">About Me</h2>
+            <p>
+              I am currently a Research Assistant in MMLab@NTU supervised by
+              <a href="https://www.mmlab-ntu.com/person/ccloy/" target="_blank">Prof. Chen Change Loy</a>. 
+              I obtained M.S. degree in Signal Processing in Nanyang Technological University, advised by <a href="https://li-chongyi.github.io/" target="_blank">Prof. Chongyi Li</a>.
+              Before this, I obtained B.S. degree in Electronic Information Engineering from <a href="http://en.tju.edu.cn/" target="_blank">Tianjin University</a> in 2022.
+            </p>
+
+            <p>
+              I am interested in computational photography and image editing. My current research mainly focus on object insertion and removal.
+            </p>
+  
+
+            <!--Publications-->
+            <h2 id="publications">
+              Publications
+              <span style="font-size: 1rem;margin-left: 1rem;position: relative;bottom: .2rem;">
+                <a href="https://scholar.google.com/citations?user=UyKX7ZsAAAAJ" target="_blank" style="font-size: 20px;">
+                  [Google Scholar]
+                </a>
+              </span>
+            </h2>
+
+            <!--List of publications-->
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src=".\images\publications\Beauty_REC_dataset.png">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Adaptive Window Pruning for Local Motion Deblurring</b><br>
+                    The Twelfth International Conference on Learning Representations, <b>ICLR 2024</b></i> &nbsp;<em class="red"></em><br>
+                    Haoying Li, <b>Jixin Zhao</b>, Shangchen Zhou, Huajun Feng, Chongyi Li, and Chen Change Loy.<br>               
+                    <a href="https://iclr.cc/virtual/2024/poster/18103" target="_blank">[Paper]</a>
+                    <a href="https://leiali.github.io/LMD-ViT_webpage/" target="_blank">[Project Page]</a>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src=".\images\publications\Beauty_REC_dataset.png">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>BeautyREC: Robust, Efficient, and Content-preserving Makeup Transfer</b><br>
+                    Computer Vision and Pattern Recognition Workshop, <b>CVPRW 2023</b></i> &nbsp;<em class="red"></em><br>
+                    Qixin Yan, Chunle Guo, <b>Jixin Zhao</b>, Yuekun Dai, Chen Change Loy, and Chongyi Li.<br>                   
+                    <a href="https://arxiv.org/abs/2212.05855" target="_blank">[Paper]</a>
+                    <a href="https://li-chongyi.github.io/BeautyREC_files/" target="_blank">[Project Page]</a>
+                    <a href="https://li-chongyi.github.io/BeautyREC_files/" target="_blank">[Code]</a>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+    <!-- Footer -->
+    <footer class="container" >
+      <br><hr>
+     
+      <div class="footer_social" style= "text-align: center; margin-left: 275px;">
+        <span style="display:inline; font-size: 2em; margin-right: 7px; color: #4a4a4a;">Yuekun Dai</span>
+        
+        <a href="https://github.com/zjx0101" target="_blank">
+          <span class="fab fa-github fa-2x" style="display:inline; text-decoration: none; color: #4a4a4a;"></span>
+        </a>
+        <a href="https://scholar.google.com/citations?user=0Z89rfUAAAAJ" target="_blank">
+          <span class="fab fa-google fa-2x" style="display:inline; text-decoration: none; color: #4a4a4a; margin-left: 6px"></span>
+        </a>
+        <a href="www.linkedin.com/in/jixin-zhao-6693141b0" target="_blank">
+          <span class="fab fa-linkedin fa-2x" style="display:inline; text-decoration: none; color: #4a4a4a; margin-left: 6px"></span>
+        </a>
+        <a href="mailto:jixin.zhao@ntu.edu.sg" target="_blank">
+          <span class="fa-regular fa-envelope fa-2x" style="display:inline; text-decoration: none; color: #4a4a4a; margin-left: 6px"></span>
+        </a>
+        <div class="footer_social" style= "display:inline; float:right;  font-size: 2em;">
+          © modified from Yuekun Dai's website
+        </div>
+      
+ 
+    </footer>
+</section>
+
+  <script>
+
+    var $hashList = $('.menu-list a'), offsetList, maxScrollHeight;
+
+    $('#sidebar').on('click', 'a', function(){
+      activate($(this))
+    });
+    
+    $(window).on('resize', debounce(calculateBoundary, 300));
+
+    $(document).on('scroll', debounce(judgeScroll, 300));
+
+    calculateBoundary();
+    judgeScroll();
+    
+    function  calculateBoundary() {
+      offsetList = $hashList.map(function(idx, ele){
+        return $(ele.hash).offset().top
+      });
+      maxScrollHeight = $(document).height() - $(window).height()
+    }
+    
+    function judgeScroll() {
+      var tps = $("html").scrollTop()
+              ? $("html").scrollTop()
+              : $("body").scrollTop(),
+              len = offsetList.length;
+      if(tps >= maxScrollHeight-10){
+        activate($hashList.eq(len-1));
+        return
+      }
+      for(var i=0; i<len; i++){
+       if(tps+50<offsetList[i]){
+          activate($hashList.eq(Math.max(0,i-1)));
+          return
+        }
+      }
+    }
+
+    function activate(ele){
+      $hashList.removeClass('is-active');
+      ele.addClass('is-active');
+    }
+
+    function debounce(fn, delay) {
+      var timeout = null;
+      return function () {
+        var args = arguments;
+        var context = this;
+        if (!timeout) {
+          timeout = setTimeout(function () {
+            timeout = 0;
+            return fn.apply(context, args);
+          }, delay);
+        }
+      };
+    }
+
+
+
+  </script>
+
+
+</body>
+
+</html>
