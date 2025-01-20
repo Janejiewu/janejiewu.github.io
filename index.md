@@ -13,4 +13,4 @@
 - Computer Vision
 
 ### Recent News:
-- 2022/05 I created my first homepage. It's quite simple, but I will improve it in the future!
+- 2022/05
