@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Yuekun Dai</title>
+  <title>Jixin Zhao</title>
   <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
   <link rel="shortcut icon" type="image/x-icon" href="images/misc/profile.jpg">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -72,7 +72,7 @@
               <img src="images/misc/profile_img.jpg">
             </figure>
             <div class="content">
-              <h2 style="margin-top: 1em">Yuekun Dai</h2>
+              <h2 style="margin-top: 1em">Jixin Zhao</h2>
               <p>
                 <b>MMLab@NTU</b><br/> 
                 Singapore<br/> 
@@ -190,7 +190,7 @@
       <br><hr>
      
       <div class="footer_social" style= "text-align: center; margin-left: 275px;">
-        <span style="display:inline; font-size: 2em; margin-right: 7px; color: #4a4a4a;">Yuekun Dai</span>
+        <span style="display:inline; font-size: 2em; margin-right: 7px; color: #4a4a4a;">Jixin Zhao</span>
         
         <a href="https://github.com/zjx0101" target="_blank">
           <span class="fab fa-github fa-2x" style="display:inline; text-decoration: none; color: #4a4a4a;"></span>
