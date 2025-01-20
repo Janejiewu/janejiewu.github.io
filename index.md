@@ -80,16 +80,16 @@
             </div>
             <!-- social network icons -->
             <div class="social">
-              <a href="https://github.com/ykdai" target="_blank">
+              <a href="https://github.com/zjx0101" target="_blank">
                 <span class="fab fa-github fa-2x" style="display:inline; text-decoration: none; color: #4a4a4a;"></span>
               </a>
-              <a href="https://scholar.google.com/citations?user=UyKX7ZsAAAAJ" target="_blank">
+              <a href="https://scholar.google.com/citations?user=0Z89rfUAAAAJ" target="_blank">
                 <span class="fab fa-google fa-2x" style="display:inline; text-decoration: none; color: #4a4a4a; margin-left: 15px"></span>
               </a>
-              <a href="https://www.linkedin.com/in/%E6%9C%88%E5%9D%A4-%E6%88%B4-19b33421a/" target="_blank">
+              <a href="www.linkedin.com/in/jixin-zhao-6693141b0" target="_blank">
                 <span class="fab fa-linkedin fa-2x" style="display:inline; text-decoration: none; color: #4a4a4a; margin-left: 15px"></span>
               </a>
-              <a href="mailto:ydai005@e.ntu.edu.sg" target="_blank">
+              <a href="mailto:jixin.zhao@ntu.edu.sg" target="_blank">
                 <span class="fa-regular fa-envelope fa-2x" style="display:inline; text-decoration: none; color: #4a4a4a; margin-left: 15px"></span>
               </a>
             </div>
@@ -99,18 +99,12 @@
               <p class="menu-label"><b>Quick Links</b></p>
               <ul class="menu-list">
                 <li><a href="#intro">About Me</a></li>
-                <li><a href="#experiences">Experiences</a></li>
                 <li><a href="#publications">Publications</a></li>
-                <li><a href="#awards">Awards</a></li>
-                <li><a href="#services">Services</a></li>
               </ul>
             </div>
 
             <div class="slogon">
               <p>Welcome to my homepage!</p> 
-            </div>
-            <div>
-              <a href="https://clustrmaps.com/site/1btxt" title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?cl=0e1633&w=215&t=n&d=n74bl4ZAst384EnLUu0gpdoA6A_gY_udu62VgWFA7js&co=ffffff&ct=8b8787"></a>
             </div>
           </div>
 
@@ -139,7 +133,7 @@
             <h2 id="publications">
               Publications
               <span style="font-size: 1rem;margin-left: 1rem;position: relative;bottom: .2rem;">
-                <a href="https://scholar.google.com/citations?user=UyKX7ZsAAAAJ" target="_blank" style="font-size: 20px;">
+                <a href="https://scholar.google.com/citations?user=0Z89rfUAAAAJ" target="_blank" style="font-size: 20px;">
                   [Google Scholar]
                 </a>
               </span>
@@ -156,7 +150,7 @@
                 <div class="content">
                   <p>
                     <b>Adaptive Window Pruning for Local Motion Deblurring</b><br>
-                    The Twelfth International Conference on Learning Representations, <b>ICLR 2024</b></i> &nbsp;<em class="red"></em><br>
+                    The Twelfth International Conference on Learning Representations, <b>ICLR 2024</b> &nbsp;<em class="red"></em><br>
                     Haoying Li, <b>Jixin Zhao</b>, Shangchen Zhou, Huajun Feng, Chongyi Li, and Chen Change Loy.<br>               
                     <a href="https://iclr.cc/virtual/2024/poster/18103" target="_blank">[Paper]</a>
                     <a href="https://leiali.github.io/LMD-ViT_webpage/" target="_blank">[Project Page]</a>
@@ -175,7 +169,7 @@
                 <div class="content">
                   <p>
                     <b>BeautyREC: Robust, Efficient, and Content-preserving Makeup Transfer</b><br>
-                    Computer Vision and Pattern Recognition Workshop, <b>CVPRW 2023</b></i> &nbsp;<em class="red"></em><br>
+                    Computer Vision and Pattern Recognition Workshop, <b>CVPRW 2023</b> &nbsp;<em class="red"></em><br>
                     Qixin Yan, Chunle Guo, <b>Jixin Zhao</b>, Yuekun Dai, Chen Change Loy, and Chongyi Li.<br>                   
                     <a href="https://arxiv.org/abs/2212.05855" target="_blank">[Paper]</a>
                     <a href="https://li-chongyi.github.io/BeautyREC_files/" target="_blank">[Project Page]</a>
