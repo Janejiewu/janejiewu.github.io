@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="ObjectClear">
+  <meta name="keywords" content="ObjectClear, Object Removal, Object Removal Dataset">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ObjectClear</title>
+
+  <script>
+    function showGif(type) {
+      // Toggle display
+      document.getElementById('gif-strokes').style.display = type === 'strokes' ? 'block' : 'none';
+      document.getElementById('gif-clicks').style.display = type === 'clicks' ? 'block' : 'none';
+  
+      // Toggle active class
+      document.getElementById('thumb-strokes').classList.toggle('active', type === 'strokes');
+      document.getElementById('thumb-clicks').classList.toggle('active', type === 'clicks');
+    }
+  </script>
+
+  <style>
+  .hr {width: 100%; height: 1px; margin: 48px 0; background-color: #d6dbdf;}
+  </style>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./assets/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./assets/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <!-- custom css file  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/twentytwenty.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop head">
+      <div class="columns is-centered">
+        <div class="column has-text-centered head">
+          <a href="index.html">
+            <img src="./assets/images/ObjectClear_logo.png" width=230px alt="Logo">
+          </a>
+          <br>
+
+          <h1 class="title is-3 publication-title"> 
+            Complete Object Removal via Object-Effect Attention
+          </h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://zjx0101.github.io/" target="_blank">Jixin Zhao</a>,&nbsp;&nbsp;</span>
+            <span class="author-block">
+              <a href="https://shangchenzhou.com/" target="_blank">Shangchen Zhou</a><sup>†</sup>,&nbsp;&nbsp;</span>
+            <span class="author-block">
+              <a href="https://wzhouxiff.github.io/" target="_blank">Zhouxia Wang</a>,&nbsp;&nbsp;</span>
+            <span class="author-block">
+              <a href="https://pq-yang.github.io/" target="_blank">Peiqing Yang</a>,&nbsp;&nbsp;</span> 
+            <span class="author-block">
+              <a href="https://www.mmlab-ntu.com/person/ccloy/" target="_blank">Chen Change Loy</a></span>
+            <span class="author-block">
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">S-Lab, Nanyang Technological University </span>
+          </div>
+
+          <span class="author-block"><sup>†</sup>Corresponding author</span>
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="./xx.pdf" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <!-- arXiv Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2309.03897" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+              <!-- Code Link. -->
+              <span class="link-block"> 
+                <a href="#" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Soon)</span>
+                  </a>
+              </span>
+
+              <!-- Demo Link. -->
+              <span class="link-block">
+                <a href="#" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <img src="./assets/images/hf.png">
+                  </span>
+                  <span>Demo (Soon)</span>
+                </a>
+              </span>
+
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://youtu.be/92EHfgCO5-Q" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+            </div> -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- first row -->
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <div class="item">
+          <div class="twentytwenty-container" mask-src="./assets/images_cleared/shadow_09_mask.png" data-orientation="horizontal" ratio="0.5885">
+            <div class="desc">Shadow</div>
+            <div class="image">
+              <img src="./assets/images_cleared/shadow_09_input.png" />
+            </div>
+            <div class="image">
+              <img src="./assets/images_cleared/shadow_09_output.png" />
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="item">
+          <div class="twentytwenty-container" mask-src="./assets/images_cleared/shadow_03_mask.png" data-orientation="horizontal" ratio="0.5885">
+            <div class="desc">Shadow</div>
+            <div class="image">
+              <img src="./assets/images_cleared/shadow_03_input.jpg" />
+            </div>
+            <div class="image">
+              <img src="./assets/images_cleared/shadow_03_output.jpg" />
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="item">
+          <div class="twentytwenty-container" mask-src="./assets/images_cleared/shadow_04_mask.png" data-orientation="horizontal" ratio="0.5885">
+            <div class="desc">Shadow</div>
+            <div class="image">
+              <img src="./assets/images_cleared/shadow_04_input.png" />
+            </div>
+            <div class="image">
+              <img src="./assets/images_cleared/shadow_04_output.png" />
+            </div>
+          </div>
+        </div>
+
+
+        <div class="item">
+          <div class="twentytwenty-container" mask-src="./assets/images_cleared/shadow_02_mask.png" data-orientation="horizontal" ratio="0.5885">
+            <div class="desc">Shadow</div>
+            <div class="image">
+              <img src="./assets/images_cleared/shadow_02_input.jpg" />
+            </div>
+            <div class="image">
+              <img src="./assets/images_cleared/shadow_02_output.jpg" />
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container" mask-src="./assets/images_cleared/shadow_01_mask.png" data-orientation="horizontal" ratio="0.5885">
+            <div class="desc">Shadow</div>
+            <div class="image">
+              <img src="./assets/images_cleared/shadow_01_input.jpg" />
+            </div>
+            <div class="image">
+              <img src="./assets/images_cleared/shadow_01_output.jpg" />
+            </div>
+          </div>
+        </div>
+
+
+        <div class="item">
+          <div class="twentytwenty-container" mask-src="./assets/images_cleared/shadow_05_mask.png" data-orientation="horizontal" ratio="0.5885">
+            <div class="desc">Shadow</div>
+            <div class="image">
+              <img src="./assets/images_cleared/shadow_05_input.png" />
+            </div>
+            <div class="image">
+              <img src="./assets/images_cleared/shadow_05_output.png" />
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container" mask-src="./assets/images_cleared/shadow_06_mask.png" data-orientation="horizontal" ratio="0.5885">
+            <div class="desc">Shadow</div>
+            <div class="image">
+              <img src="./assets/images_cleared/shadow_06_input.png" />
+            </div>
+            <div class="image">
+              <img src="./assets/images_cleared/shadow_06_output.png" />
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container" mask-src="./assets/images_cleared/shadow_07_mask.png" data-orientation="horizontal" ratio="0.5885">
+            <div class="desc">Shadow</div>
+            <div class="image">
+              <img src="./assets/images_cleared/shadow_07_input.png" />
+            </div>
+            <div class="image">
+              <img src="./assets/images_cleared/shadow_07_output.png" />
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container" mask-src="./assets/images_cleared/shadow_08_mask.png" data-orientation="horizontal" ratio="0.5885">
+            <div class="desc">Shadow</div>
+            <div class="image">
+              <img src="./assets/images_cleared/shadow_08_input.png" />
+            </div>
+            <div class="image">
+              <img src="./assets/images_cleared/shadow_08_output.png" />
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+  </div>
+</section>
+
+<!-- second row -->
+<section class="hero is-light is-small">
+  <div class="hero-body second-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <div class="item">
+          <div class="twentytwenty-container" mask-src="./assets/images_cleared/reflection_09_mask.png" data-orientation="horizontal" ratio="0.5885">
+            <div class="desc">Reflection</div>
+            <div class="image">
+              <img src="./assets/images_cleared/reflection_09_input.png" />
+            </div>
+            <div class="image">
+              <img src="./assets/images_cleared/reflection_09_output.png" />
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container" mask-src="./assets/images_cleared/reflection_08_mask.png" data-orientation="horizontal" ratio="0.5885">
+            <div class="desc">Reflection</div>
+            <div class="image">
+              <img src="./assets/images_cleared/reflection_08_input.png" />
+            </div>
+            <div class="image">
+              <img src="./assets/images_cleared/reflection_08_output.png" />
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container" mask-src="./assets/images_cleared/reflection_06_mask.png" data-orientation="horizontal" ratio="0.5885">
+            <div class="desc">Reflection</div>
+            <div class="image">
+              <img src="./assets/images_cleared/reflection_06_input.png" />
+            </div>
+            <div class="image">
+              <img src="./assets/images_cleared/reflection_06_output.png" />
+            </div>
+          </div>
+        </div>
+
+
+        <div class="item">
+          <div class="twentytwenty-container" mask-src="./assets/images_cleared/reflection_02_mask.png" data-orientation="horizontal" ratio="0.5885">
+            <div class="desc">Reflection</div>
+            <div class="image">
+              <img src="./assets/images_cleared/reflection_02_input.png" />
+            </div>
+            <div class="image">
+              <img src="./assets/images_cleared/reflection_02_output.png" />
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container" mask-src="./assets/images_cleared/reflection_01_mask.png" data-orientation="horizontal" ratio="0.5885">
+            <div class="desc">Reflection</div>
+            <div class="image">
+              <img src="./assets/images_cleared/reflection_01_input.png" />
+            </div>
+            <div class="image">
+              <img src="./assets/images_cleared/reflection_01_output.png" />
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container" mask-src="./assets/images_cleared/reflection_03_mask.png" data-orientation="horizontal" ratio="0.5885">
+            <div class="desc">Reflection</div>
+            <div class="image">
+              <img src="./assets/images_cleared/reflection_03_input.png" />
+            </div>
+            <div class="image">
+              <img src="./assets/images_cleared/reflection_03_output.png" />
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container" mask-src="./assets/images_cleared/reflection_04_mask.png" data-orientation="horizontal" ratio="0.5885">
+            <div class="desc">Reflection</div>
+            <div class="image">
+              <img src="./assets/images_cleared/reflection_04_input.png" />
+            </div>
+            <div class="image">
+              <img src="./assets/images_cleared/reflection_04_output.png" />
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container" mask-src="./assets/images_cleared/reflection_05_mask.png" data-orientation="horizontal" ratio="0.5885">
+            <div class="desc">Reflection</div>
+            <div class="image">
+              <img src="./assets/images_cleared/reflection_05_input.png" />
+            </div>
+            <div class="image">
+              <img src="./assets/images_cleared/reflection_05_output.png" />
+            </div>
+          </div>
+        </div>
+
+
+        <div class="item">
+          <div class="twentytwenty-container" mask-src="./assets/images_cleared/reflection_07_mask.png" data-orientation="horizontal" ratio="0.5885">
+            <div class="desc">Reflection</div>
+            <div class="image">
+              <img src="./assets/images_cleared/reflection_07_input.png" />
+            </div>
+            <div class="image">
+              <img src="./assets/images_cleared/reflection_07_output.png" />
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+      <!-- <div class="column"> -->
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Object removal requires eliminating not only the target object but also its effects, such as shadows and reflections. 
+            However, diffusion-based inpainting methods often produce artifacts, hallucinate content, alter background, and struggle 
+            to remove object effects accurately. To address this challenge, we introduce a new dataset for OBject-Effect Removal, 
+            named <b>OBER</b>, which provides paired images with and without object effects, along with precise masks for both 
+            objects and their associated visual artifacts. The dataset comprises high-quality captured and simulated data, covering 
+            diverse object categories and complex multi-object scenes. Building on <b>OBER</b>, we propose a novel framework, 
+            <b>ObjectClear</b>, which incorporates an object-effect attention mechanism to guide the model toward the foreground 
+            removal regions by learning attention masks, effectively decoupling foreground removal from background reconstruction. 
+            Furthermore, the predicted attention map enables an attention-guided fusion strategy during inference, greatly preserving 
+            background details. Extensive experiments demonstrate that <b>ObjectClear</b> significantly outperforms existing methods, 
+            achieving superior object-effect removal quality and background fidelity, especially in complex scenarios.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop has-text-centered">
+    <h2 class="title is-3">ObjectClear Interaction Demo</h2>
+
+    <div class="gif-selector">
+      <img src="./assets/gifs/user_strokes.gif" alt="Scribbles" id="thumb-strokes" onclick="showGif('strokes')" class="active">
+      <img src="./assets/gifs/user_clicks.gif" alt="Clicks" id="thumb-clicks" onclick="showGif('clicks')">
+    </div>
+
+    <div class="gif-display">
+      <div id="gif-strokes">
+        <div class="gif-title">ObjectClear with User Strokes</div>
+        <br>
+        <img src="./assets/gifs/user_strokes.gif" alt="Scribbles Full View">
+      </div>
+      <div id="gif-clicks" style="display: none;">
+        <div class="gif-title">ObjectClear with User Clicks</div>
+        <br>
+        <img src="./assets/gifs/user_clicks.gif" alt="Clicks Full View">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <!-- <div class="column is-four-fifths"> -->
+      <div class="column">
+        <h2 class="title is-3">OBER Dataset</h2>
+        <div class="content has-text-justified">
+          <p>
+            The OBER dataset combines both camera-captured and simulated data, featuring diverse foreground objects and background scenes. 
+            It provides rich annotations, including object masks, object-effect masks, transparent RGBA object layers, and complex multi-object 
+            scenarios for training and evaluation.
+          </p>
+          <div class="column">
+            <img src="./assets/images/OBER_pipeline.png" />
+          </div>
+        </div>
+
+        <h2 class="title is-3">ObjectClear Pipeline</h2>
+        <div class="content has-text-justified">
+          <p>
+            Given an input image and a target object mask, ObjectClear employs an Object-Effect Attention mechanism to guide the model toward 
+            foreground removal regions by learning attention masks. The predicted mask further enables an Attention-Guided Fusion strategy during 
+            inference, which substantially preserves background details.
+          </p>
+          <div class="column">
+            <img src="./assets/images/ObjectClear_pipeline.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@InProceedings{zhou2023propainter,
+      title     = {{ProPainter}: Improving Propagation and Transformer for Video Inpainting},
+      author    = {Zhou, Shangchen and Li, Chongyi and Chan, Kelvin C.K and Loy, Chen Change},
+      booktitle = {Proceedings of IEEE International Conference on Computer Vision (ICCV)},
+      year      = {2023}
+    }</code></pre>
+  </div>
+</section> -->
+<!-- 
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://arxiv.org/abs/2309.03897" target="_blank">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/sczhou/ProPainter" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+      <a class="icon-link" href="https://huggingface.co/spaces/sczhou/ProPainter" target="_blank">
+        <img src="./assets/images/hf_black.png">
+      </a>
+      <a class="icon-link" href="https://youtu.be/92EHfgCO5-Q" target="_blank">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div> -->
+
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <div class="columns is-centered"><p>
+            This website template is borrowed from <a href="https://github.com/nerfies/nerfies.github.io" target="_blank">Nerfies</a> 
+            and <a href="https://github.com/sczhou/ProPainter_website" target="_blank">ProPainter</a>. Thank you!
+          </p></div>
+        </div>
+      </div>
+    </div>
+
+    <!--=================Visitor==========================-->
+    <div class="content has-text-centered" style="padding:0 0 0 0">
+      <img src='https://api.infinitescript.com/badgen/count?name=sczhou/ObjectClear&ltext=Visitors&color=3977dd' alt='visitors'>
+    </div>
+
+  </div>
+</footer>
+
+  <!-- custom js file  -->
+  <!-- <script defer src="./assets/js/fontawesome.all.min.js"></script> -->
+  <script src="./assets/js/bulma-carousel.min.js"></script>
+  <script src="./assets/js/bulma-slider.min.js"></script>
+  <script src="./assets/js/index.js"></script>
+  <script src="./assets/js/jquery.event.move.js"></script>
+  <script src="./assets/js/jquery.twentytwenty.js"></script>
+  <script>
+  $(function(){
+    $(".twentytwenty-container").twentytwenty();
+    // $(".twentytwenty-container", "#results-carousel").twentytwenty({default_offset_pct: 0.5, ratio: 0.5});
+  });
+  </script>
+</body>
+</html>
