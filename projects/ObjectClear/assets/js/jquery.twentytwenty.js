@@ -44,10 +44,10 @@
         let width = beforeImg.width();
         let relativeX = e.pageX - offset.left;
       
-        let clippedWidth = width * sliderPct; // 裁剪后的宽度
+        let clippedWidth = width * sliderPct;
         let triggerZone = clippedWidth * 0.9;
       
-        // 两个条件都满足才替换成 mask
+
         if (relativeX < triggerZone && relativeX >= 0) {
           if (!isMasked && maskSrc) {
             beforeImg.find("img").attr("src", maskSrc);
@@ -55,7 +55,6 @@
             adjustSlider(sliderPct);
           }
         } else {
-          // 只要有一个条件不满足就还原
           if (isMasked) {
             beforeImg.find("img").attr("src", originalSrc);
             isMasked = false;
@@ -65,7 +64,6 @@
       });
       
       beforeImg.on("mouseleave", function () {
-        // 鼠标离开 left image 也算不满足条件之一 → 立即还原
         if (isMasked) {
           beforeImg.find("img").attr("src", originalSrc);
           isMasked = false;
