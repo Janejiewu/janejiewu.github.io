@@ -45,7 +45,7 @@
         let relativeX = e.pageX - offset.left;
       
         let clippedWidth = width * sliderPct;
-        let triggerZone = clippedWidth * 0.9;
+        let triggerZone = clippedWidth * 0.85;
       
 
         if (relativeX < triggerZone && relativeX >= 0) {
